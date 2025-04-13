@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRB;
     private Vector2 moveInput;
-
+    private Vector3 mouseWorldPos;
 
     void Start()
     {
@@ -31,9 +32,11 @@ public class PlayerController : MonoBehaviour
 
     private void rotatePlayerTowardsMouse()
     {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPos.z = 0f;
         Vector2 direction = (mouseWorldPos - transform.position).normalized;
+
+        //print(mouseWorldPos);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg -90f;
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
