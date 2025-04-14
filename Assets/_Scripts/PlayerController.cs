@@ -36,15 +36,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-    }
-
-
     void FixedUpdate()
     {
         PlayerMovement();

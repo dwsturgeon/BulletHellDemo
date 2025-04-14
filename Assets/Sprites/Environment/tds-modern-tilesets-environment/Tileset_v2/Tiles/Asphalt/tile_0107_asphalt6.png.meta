@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tile_0107_asphalt6_0: 6030185232210757432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
