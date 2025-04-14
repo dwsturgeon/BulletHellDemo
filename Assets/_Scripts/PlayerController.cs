@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
-=======
 using System;
 using System.Data.Common;
->>>>>>> Stashed changes
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -22,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRB;
     private Vector2 moveInput;
+
 
 
 
@@ -65,6 +63,9 @@ public class PlayerController : MonoBehaviour
         //print(mouseWorldPos);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + addedRotation;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
 
