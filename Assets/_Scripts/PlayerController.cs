@@ -20,8 +20,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRB;
     private Vector2 moveInput;
     private Vector3 mouseWorldPos;
+    public static PlayerController instance;
 
-
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
 
     void Start()
     {
