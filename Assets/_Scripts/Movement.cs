@@ -9,6 +9,8 @@ namespace TopDown.Movement
         private Rigidbody2D body;
         protected Vector3 currentInput;
 
+        public Vector3 CurrentInput => currentInput;
+
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
@@ -16,7 +18,7 @@ namespace TopDown.Movement
 
         private void FixedUpdate()
         {
-            body.linearVelocity = movementSpeed * currentInput * Time.deltaTime;
+            body.linearVelocity = movementSpeed * currentInput * Time.fixedDeltaTime;
         }
     }
 }
