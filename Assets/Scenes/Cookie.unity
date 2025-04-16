@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 1858593948}
   - component: {fileID: 1858593950}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: EnemyPlaceholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,11 +452,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1510242756672965850, guid: 60d6df168fdc34e4bb8638f1889da516, type: 3}
-  bulletMoveSpeed: 2
-  burstCount: 5
-  projectilesPerBurst: 19
-  angleSpread: 359
-  startingDistance: 0.1
+  bulletMoveSpeed: 4
+  burstCount: 3
+  projectilesPerBurst: 15
+  angleSpread: 130
+  startingDistance: 0.2
   timeBetweenBursts: 0.3
   restTime: 1
   stagger: 1
