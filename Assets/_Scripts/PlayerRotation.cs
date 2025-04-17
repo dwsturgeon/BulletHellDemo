@@ -6,16 +6,21 @@ namespace TopDown.Movement
 {
     public class PlayerRotation : Rotator
     {
-        //Torso and Legs
+        [Header("Body and Legs")]
         [SerializeField] private Transform torso;
         [SerializeField] private Transform legs;
 
+
         //Mover Reference
+        [Header("Mover Reference")]
         [SerializeField] private Movement playerMovement;
+
+        public Transform Torso { get => torso; set => torso = value; }
+
         private void OnLook(InputValue value)
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint( value.Get<Vector2>());
-            LookAt( torso, mousePosition );
+            LookAt( Torso, mousePosition );
         }
 
         private void Update()
