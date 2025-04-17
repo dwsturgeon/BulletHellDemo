@@ -4,13 +4,13 @@ namespace TopDown.Movement
 {
     public class Rotator : MonoBehaviour
     {
-        protected void LookAt(Vector3 target)
+        protected void LookAt(Transform rotatedTransform, Vector3 target)
         {
             //Calculate angle between transform and target
-            float lookAngle = AngleBetweenTwoPoints(transform.position, target) + 90;
+            float lookAngle = AngleBetweenTwoPoints(transform.position, target) - 90;
 
             //Assign the target rotation on the Z axis
-            transform.eulerAngles = new Vector3(0, 0, lookAngle);
+            rotatedTransform.eulerAngles = new Vector3(0, 0, lookAngle);
         }
 
         private float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
