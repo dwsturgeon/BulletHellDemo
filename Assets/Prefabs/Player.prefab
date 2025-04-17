@@ -330,8 +330,8 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 15
   addedRotation: 90
-  projectilePrefab: {fileID: 0}
-  muzzleTransform: {fileID: 0}
+  projectilePrefab: {fileID: 4711819817858117461, guid: 7cc735b7cdf982a4fa538a5e65746a42, type: 3}
+  muzzleTransform: {fileID: 9150135186441555336}
 --- !u!114 &6417245845654863607
 MonoBehaviour:
   m_ObjectHideFlags: 0
