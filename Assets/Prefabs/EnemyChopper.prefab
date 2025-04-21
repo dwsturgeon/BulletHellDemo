@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5164579671904762524}
   - component: {fileID: 6841149124626039254}
+  - component: {fileID: 6309264652990493599}
   m_Layer: 0
   m_Name: ProjectileSpawner
   m_TagString: Untagged
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603217876301026289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb8639646fe86ad43805b9d50ef8ee34, type: 3}
   m_Name: 
@@ -49,6 +50,28 @@ MonoBehaviour:
   burstCount: 0
   projectilesPerBurst: 0
   angleSpread: 0
+  startingDistance: 0.1
+  timeBetweenBursts: 0
+  restTime: 1
+  stagger: 0
+  oscillate: 0
+--- !u!114 &6309264652990493599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603217876301026289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b22a4696509666479ce1c142688e2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1510242756672965850, guid: 60d6df168fdc34e4bb8638f1889da516, type: 3}
+  bulletMoveSpeed: 6
+  burstCount: 5
+  projectilesPerBurst: 6
+  angleSpread: 110
   startingDistance: 0.1
   timeBetweenBursts: 0
   restTime: 1
@@ -69,7 +92,7 @@ GameObject:
   - component: {fileID: 8024697878088079011}
   m_Layer: 0
   m_Name: EnemyChopper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b1081a1ea477946a68e35f70684848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 0.002
   rotationSpeed: 15
   addedRotation: 90
 --- !u!1 &8416362983859242459

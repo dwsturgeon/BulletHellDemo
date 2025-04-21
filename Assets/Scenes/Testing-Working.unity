@@ -281,11 +281,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!1 &763763652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7567263961912249251, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
-  m_PrefabInstance: {fileID: 1607065640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &991857175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8421487762302825933, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
@@ -578,7 +573,7 @@ MonoBehaviour:
   minZoom: 2
   maxZoom: 10
   smoothSpeed: 5
---- !u!1001 &6480889413866162689
+--- !u!1001 &2144663004
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -586,14 +581,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2394448994203850145, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394448994203850145, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2938292493227382076, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
       propertyPath: m_Name
       value: EnemyChopper
@@ -638,23 +625,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8024697878088079011, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 763763652}
-    - target: {fileID: 8024697878088079011, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 763763652}
-    - target: {fileID: 8024697878088079011, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: moveSpeed
-      value: 0.01
+    - target: {fileID: 6309264652990493599, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
+      propertyPath: stagger
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8024697878088079011, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
-      propertyPath: rotationSpeed
-      value: 5
+    - target: {fileID: 6309264652990493599, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
+      propertyPath: oscillate
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8350326063553163818, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
+    - target: {fileID: 6309264652990493599, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1510242756672965850, guid: 60d6df168fdc34e4bb8638f1889da516, type: 3}
+    - target: {fileID: 6309264652990493599, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
+      propertyPath: timeBetweenBursts
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841149124626039254, guid: 43e4bfe12023a2e4783f65b2c61c8580, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -669,5 +656,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1965387479}
   - {fileID: 1979023149}
+  - {fileID: 2144663004}
   - {fileID: 1607065640}
-  - {fileID: 6480889413866162689}
