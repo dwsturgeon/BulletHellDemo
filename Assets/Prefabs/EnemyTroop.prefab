@@ -48,7 +48,7 @@ MonoBehaviour:
   bulletMoveSpeed: 3
   burstCount: 4
   projectilesPerBurst: 3
-  angleSpread: 101
+  angleSpread: 0
   startingDistance: 0.1
   timeBetweenBursts: 1
   restTime: 1
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 8024697878088079011}
   - component: {fileID: 1882280823839676176}
   m_Layer: 0
-  m_Name: EnemyChopper
+  m_Name: EnemyTroop
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,8 +181,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0045003295, y: 0.25045288}
-  m_Size: {x: 1.5229782, y: 2.1289942}
+  m_Offset: {x: 0.005178988, y: 0.0321393}
+  m_Size: {x: 0.26466107, y: 0.28885984}
   m_Direction: 0
 --- !u!50 &2394448994203850145
 Rigidbody2D:
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags:
-  - Chopper
+  - Troop
 --- !u!1 &8416362983859242459
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 4996028068831875913}
   - component: {fileID: 7613846639513551454}
   m_Layer: 0
-  m_Name: Chopper
+  m_Name: Troop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,7 +316,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -555744780623910725, guid: 337339a71576b464480b5cbb6c8452e0, type: 3}
+  m_Sprite: {fileID: 4528699623369049115, guid: 7b877e5d60377454a939d281f3c2dde6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

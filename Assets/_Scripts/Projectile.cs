@@ -5,8 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
-    private GameObject enemy;
 
+    private GameObject[] enemies;
+    private GameObject enemy;
 
     public static Projectile instance;
 
@@ -20,8 +21,21 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-        Physics2D.IgnoreCollision(this.GetComponent<CircleCollider2D>(), enemy.GetComponent<CapsuleCollider2D>(), true);
+        
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        //loop through enemies to remove collision
+        for (int i = 0; i < enemies.Length; i++) 
+        {
+            enemy = enemies[i];
+            
+
+            //remove collision for game objects with tag Enemy and custom tag Chopper only
+            if(enemy.GetComponent<CustomTag>().HasTag("Chopper"))
+            {
+                Physics2D.IgnoreCollision(this.GetComponent<CircleCollider2D>(), enemies[i].GetComponent<CapsuleCollider2D>(), true);
+            }
+        }
     }
     private void Update()
     { 
@@ -44,9 +58,11 @@ public class Projectile : MonoBehaviour
             {
             Destroy(this.gameObject);
         }
+        
+        //For enemies that get affected by projectile
         if (collision.gameObject.tag == "Enemy")
         {
-            Physics2D.IgnoreCollision(this.GetComponent<CapsuleCollider2D>(), enemy.GetComponent<CapsuleCollider2D>(), true);
+            Destroy(this.gameObject);
         }
     }
 }
