@@ -62,22 +62,34 @@ public class ProjectileSpawner : MonoBehaviour
             }
 
 
-                for (int j = 0; j < projectilesPerBurst; j++)
+            for (int j = 0; j < projectilesPerBurst; j++)
+            {
+                Vector2 pos = FindBulletSpawnPos(currentAngle);
+
+                GameObject newBullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
+                newBullet.transform.right = newBullet.transform.position - transform.position;
+
+                if (newBullet.tag == "BulletContainer")
                 {
-                    Vector2 pos = FindBulletSpawnPos(currentAngle);
-
-                    GameObject newBullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
-                    newBullet.transform.right = newBullet.transform.position - transform.position;
-
-                    if (newBullet.TryGetComponent(out Projectile projectile))
-                    {
-                        projectile.UpdateMoveSpeed(bulletMoveSpeed);
-                    }
-
-                    currentAngle += angleStep;
-
-                    if (stagger) yield return new WaitForSeconds(timeBetweenProjectiles);
+                    ContainerSpawner logic = newBullet.GetComponent<ContainerSpawner>();
+                    logic.spawner = this.transform;
                 }
+                else
+                {
+                    FadeByDistance logic = newBullet.GetComponent<FadeByDistance>();
+                    logic.spawner = this.transform;
+                }
+
+
+                if (newBullet.TryGetComponent(out Projectile projectile))
+            {
+                projectile.UpdateMoveSpeed(bulletMoveSpeed);
+            }
+
+                currentAngle += angleStep;
+
+                if (stagger) yield return new WaitForSeconds(timeBetweenProjectiles);
+            }
 
             currentAngle = startAngle;
             yield return new WaitForSeconds(timeBetweenBursts);

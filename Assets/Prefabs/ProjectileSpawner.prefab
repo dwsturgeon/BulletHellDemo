@@ -44,9 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8639646fe86ad43805b9d50ef8ee34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1510242756672965850, guid: 60d6df168fdc34e4bb8638f1889da516, type: 3}
-  bulletLife: 20
-  speed: 2
-  spawnerType: 1
-  firingRate: 0.2
-  rotationSpeed: 60
+  bulletPrefab: {fileID: 2401149696557632260, guid: 681fbbcb174979545b74656f4e620809, type: 3}
+  bulletMoveSpeed: 2
+  burstCount: 1
+  projectilesPerBurst: 1
+  angleSpread: 0
+  startingDistance: 0.1
+  timeBetweenBursts: 1
+  restTime: 1
+  stagger: 0
+  oscillate: 0

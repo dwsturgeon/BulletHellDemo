@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3216080601442952854}
   - component: {fileID: 8434735714975788784}
   - component: {fileID: 2138089797064917454}
+  - component: {fileID: -5836614195481281006}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -137,6 +138,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d9350beb3247a4ca1ea2f7039abc36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletLife: 1
-  rotation: 0
-  speed: 1
+  moveSpeed: 1
+--- !u!114 &-5836614195481281006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510242756672965850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13074942e1436d549a1850cc408684de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  maxFadeDistance: 1

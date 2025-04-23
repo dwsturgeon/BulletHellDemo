@@ -302,6 +302,34 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 4711819817858117461, guid: 7cc735b7cdf982a4fa538a5e65746a42, type: 3}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 9861df77-68db-42ef-b3ab-dc89f588b785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417245845654863607, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'Player/Look[/Mouse/position]'
+      objectReference: {fileID: 0}
     - target: {fileID: 7567263961912249251, guid: e596d5df096c14b4cbea2f08b8507851, type: 3}
       propertyPath: m_Name
       value: Player
@@ -451,13 +479,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8639646fe86ad43805b9d50ef8ee34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1510242756672965850, guid: 60d6df168fdc34e4bb8638f1889da516, type: 3}
-  bulletMoveSpeed: 4
-  burstCount: 3
-  projectilesPerBurst: 15
-  angleSpread: 130
-  startingDistance: 0.2
-  timeBetweenBursts: 0.3
+  bulletPrefab: {fileID: 2401149696557632260, guid: 681fbbcb174979545b74656f4e620809, type: 3}
+  bulletMoveSpeed: 2
+  burstCount: 1
+  projectilesPerBurst: 1
+  angleSpread: 0
+  startingDistance: 0.1
+  timeBetweenBursts: 1
   restTime: 1
   stagger: 1
   oscillate: 1
