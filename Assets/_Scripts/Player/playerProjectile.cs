@@ -1,12 +1,26 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerProjectile : MonoBehaviour
 {
     [SerializeField] private Animator projAnim;
     public float _speed;
+    public float _bulletDamage = 20;
     private Vector2 direction;
+
+
+    public static PlayerProjectile instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
 
     public void SetDirection(Vector2 dir)
     {
@@ -15,6 +29,7 @@ public class PlayerProjectile : MonoBehaviour
 
     private void Start()
     {
+
         Destroy(this.gameObject, 10f);
     }
 
@@ -25,7 +40,23 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        projAnim.Play("collision", 0 ,0f);
+
+       //Manipulating health bars
+       GameObject enemy = collision.gameObject;
+       if(enemy.tag == "Enemy")
+        {
+            Slider healthBar = enemy.GetComponentInChildren<Slider>();
+            if ((healthBar.value - _bulletDamage) <= 0)
+            {
+                Destroy(enemy);
+            }
+            else
+            {
+                healthBar.value = healthBar.value - _bulletDamage;
+            }
+        }
+
+        projAnim.Play("collision", 0, 0f);
         Destroy(this.gameObject, 0.1f);
     }
 
