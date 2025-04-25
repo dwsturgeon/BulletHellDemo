@@ -33,7 +33,10 @@ public class Projectile : MonoBehaviour
             //remove collision for game objects with tag Enemy and custom tag Chopper only
             if(enemy.GetComponent<CustomTag>().HasTag("Chopper"))
             {
-                Physics2D.IgnoreCollision(this.GetComponent<CircleCollider2D>(), enemies[i].GetComponent<CapsuleCollider2D>(), true);
+                if (enemy.GetComponent<CircleCollider2D>() != null)
+                {
+                    Physics2D.IgnoreCollision(this.GetComponent<CircleCollider2D>(), enemies[i].GetComponent<CapsuleCollider2D>(), true);
+                }
             }
         }
     }
@@ -54,8 +57,10 @@ public class Projectile : MonoBehaviour
     //kill on collision
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision == null) return;
+
         if (collision.gameObject.tag == "Player")
-            {
+        {
             Destroy(this.gameObject);
         }
         
