@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BulletContainer
   - Enemy
+  - Projectile
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX
