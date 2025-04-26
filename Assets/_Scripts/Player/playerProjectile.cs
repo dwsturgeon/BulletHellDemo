@@ -25,8 +25,11 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        projAnim.Play("collision", 0 ,0f);
-        Destroy(this.gameObject, 0.1f);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            projAnim.Play("collision", 0 ,0.25f);
+            Destroy(this.gameObject, 0.25f);        
+        }
     }
 
 }

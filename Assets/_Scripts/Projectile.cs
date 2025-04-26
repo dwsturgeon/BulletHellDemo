@@ -9,16 +9,6 @@ public class Projectile : MonoBehaviour
     private GameObject[] enemies;
     private GameObject enemy;
 
-    public static Projectile instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
-
     private void Start()
     {
         
@@ -28,10 +18,19 @@ public class Projectile : MonoBehaviour
         for (int i = 0; i < enemies.Length; i++) 
         {
             enemy = enemies[i];
-            
+
+            //just in case we forget to add the component to an enemy;
+            CustomTag enemyTagComponent = enemy.GetComponent<CustomTag>();
+            if (enemyTagComponent == null)
+            {
+                Debug.LogWarning("Add CustomTag component or remove Enemy tag for " + enemy);
+                continue;
+            }
+
+
 
             //remove collision for game objects with tag Enemy and custom tag Chopper only
-            if(enemy.GetComponent<CustomTag>().HasTag("Chopper"))
+            if (enemy.GetComponent<CustomTag>().HasTag("Chopper"))
             {
                 if (enemy.GetComponent<CircleCollider2D>() != null)
                 {
@@ -57,8 +56,6 @@ public class Projectile : MonoBehaviour
     //kill on collision
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision == null) return;
-
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
