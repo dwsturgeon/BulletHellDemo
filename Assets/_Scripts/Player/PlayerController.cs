@@ -22,12 +22,19 @@ public class PlayerController : MonoBehaviour
     private Vector3 mouseWorldPos;
     public static PlayerController instance;
 
+
+    //add audio for gunshot
+    private AudioSource playerAudioSource;
+
+    [SerializeField] AudioClip pistolShot;
     private void Awake()
     {
         if(instance == null)
         {
             instance = this;
         }
+        playerAudioSource = this.GetComponent<AudioSource>();
+        playerAudioSource.clip = pistolShot;
     }
 
     void Start()
@@ -80,6 +87,8 @@ public class PlayerController : MonoBehaviour
 
         angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg -90f;
         projectile.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        playerAudioSource.Play();
     }
 
 
