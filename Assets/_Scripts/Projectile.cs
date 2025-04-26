@@ -33,14 +33,14 @@ public class Projectile : MonoBehaviour
             enemy = enemies[i];
             
 
-            //remove collision for game objects with tag Enemy and custom tag Chopper only
+            /*remove collision for game objects with tag Enemy and custom tag Chopper only
             if(enemy.GetComponent<CustomTag>().HasTag("Chopper"))
             {
                 if (enemy.GetComponent<CircleCollider2D>() != null)
-                {
+                {*/
                     Physics2D.IgnoreCollision(this.GetComponent<CircleCollider2D>(), enemies[i].GetComponent<CapsuleCollider2D>(), true);
-                }
-            }
+                /*}
+            }*/
         }
     }
     private void Update()
