@@ -226,7 +226,12 @@ GameObject:
   - component: {fileID: 6417245845654863607}
   - component: {fileID: 6681024578152798532}
   - component: {fileID: 5509248784528519713}
+  - component: {fileID: 2284182359483289706}
+  - component: {fileID: 741918408376888329}
+  - component: {fileID: 1611068787636834843}
+
   - component: {fileID: 2730558955072123071}
+
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -392,14 +397,51 @@ MonoBehaviour:
   torso: {fileID: 8063104372629739350}
   legs: {fileID: 6655987921479064846}
   playerMovement: {fileID: 6681024578152798532}
+
+--- !u!114 &2284182359483289706
+MonoBehaviour:
+=======
 --- !u!82 &2730558955072123071
 AudioSource:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7567263961912249251}
   m_Enabled: 1
+
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717ed18edecacad4eaf84f8ea325a38f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+--- !u!114 &741918408376888329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567263961912249251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af07804812781d46b40704b9de0b7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingArmor: 100
+--- !u!114 &1611068787636834843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567263961912249251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499148bead2738446ba54470655a3efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingAmmo: 120
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
