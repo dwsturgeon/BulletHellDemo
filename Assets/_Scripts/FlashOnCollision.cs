@@ -22,7 +22,7 @@ public class FlashOnCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(targetTag))
+        if (collision.CompareTag("PlayerProjectile"))
         {
             if(flashCoroutine != null)
             {
