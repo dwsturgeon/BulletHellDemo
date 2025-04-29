@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3846138262309900230}
   - component: {fileID: 2017632800820383529}
   - component: {fileID: 1694662969862655264}
-  - component: {fileID: 3695086396865020999}
   m_Layer: 0
   m_Name: Shot
   m_TagString: PlayerProjectile
@@ -164,30 +163,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00019762293, y: 0}
   m_Size: {x: 0.07379498, y: 0.09102826}
   m_Direction: 0
---- !u!50 &3695086396865020999
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4711819817858117461}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
