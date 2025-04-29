@@ -421,8 +421,6 @@ MonoBehaviour:
   startingArmor: 100
 --- !u!114 &1611068787636834843
 MonoBehaviour:
-AudioSource:
-
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
